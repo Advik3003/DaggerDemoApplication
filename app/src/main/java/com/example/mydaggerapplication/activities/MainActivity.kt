@@ -1,6 +1,7 @@
 package com.example.mydaggerapplication.activities
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        //Log for Feature branch
+        Log.d("MainActivity: ", "  onCreate method on feature branch")
         //RegistrationComponent
         DaggerUserRegistrationComponent.builder().build().apply {
             getUserRegistrationService().registerUser("test@mail.com", "1234")
