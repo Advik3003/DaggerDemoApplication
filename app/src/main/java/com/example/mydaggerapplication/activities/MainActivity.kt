@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         //Log for Main branch
         Log.d("MainActivity: ", "  onCreate method")
+        Log.d("MainActivity: main ", "  onCreate method")
 
         //RegistrationComponent
         DaggerUserRegistrationComponent.builder().build().apply {
