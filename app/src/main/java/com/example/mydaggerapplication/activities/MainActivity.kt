@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             getUserRegistrationService().registerUser("test@mail.com", "1234")
         }
 
-        //AppComponent
+
         DaggerAppComponent.create().inject(this)
         httpClient.makeRequest()
 
