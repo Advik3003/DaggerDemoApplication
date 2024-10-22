@@ -32,13 +32,12 @@ class MainActivity : AppCompatActivity() {
         //Log for Main branch
         Log.d("MainActivity: ", "  onCreate method")
 
-
         //RegistrationComponent
         DaggerUserRegistrationComponent.builder().build().apply {
             getUserRegistrationService().registerUser("test@mail.com", "1234")
         }
 
-        //AppComponent
+
         DaggerAppComponent.create().inject(this)
         httpClient.makeRequest()
 
